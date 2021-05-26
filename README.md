@@ -32,7 +32,7 @@ File or Folder | Purpose
 ### Deploy to SAP Business Technology Platform
 
 - Login: `cf login`
-- Create service: `cf create-service hanatrial hdi-shared my-bookshop-db`
+- Create service: `cf create-service hana hdi-shared my-bookshop-db`
 - Build: `cds build --production`
 - Push Database: `cf push -f gen/db`
 - Push Service: `cf push -f gen/srv --random-route`
