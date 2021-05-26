@@ -23,8 +23,17 @@ File or Folder | Purpose
 
 ## Next Steps
 
+### Run in Local Terminal
+
 - Open a new terminal and run `cds watch` 
 - (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
 - Start adding content, for example, a [db/schema.cds](db/schema.cds).
 
+### Deploy to SAP Business Technology Platform
+
+- Login: `cf login`
+- Create service: `cf create-service hanatrial hdi-shared my-bookshop-db`
+- Build: `cds build --production`
+- Push Database: `cf push -f gen/db`
+- Push Service: `cf push -f gen/srv --random-route`
 
